@@ -6,13 +6,12 @@
 //
 // let d = "hello";
 // let e = false;
-//
 // d++;
 // e++;
 // // d = NaN
 // // e = 0
 //
-// let perplexed; // perplexed is undefined (no value is assigned)
+// slet perplexed; // perplexed is undefined (no value is assigned)
 // perplexed + 2;
 // //NaN
 //
@@ -38,9 +37,9 @@ isNaN("0")
 isNaN("1")
 //false
 isNaN("3.145")
-false
+//false
 isNaN(Number.MAX_VALUE)
-//true
+//false
 isNaN(Infinity)
 //false
 isNaN("true")
@@ -50,7 +49,7 @@ isNaN(true)
 isNaN("false")
 //true
 isNaN(false)
-false
+//false
 // to illustrate why the isNaN() function is needed:
 NaN == NaN
 //false
@@ -64,14 +63,13 @@ NaN == NaN
 !!false
 //false
 !!0
-//0
+//false
 !!-0
 //false
 !!1
 //true
 !!-1
 //true
-
 !!0.1
 //true
 !!"hello"
@@ -128,23 +126,23 @@ let totalPay = (googleHoursWorked * googlePerHour) +
 console.log(totalPay)
 
 //************************Question 4************
-let username = 'codeup';
-let password = 'notastrongpasswordcodeup';
+let username = ' codeup ';
+let password = ' notastrongpassword ';
 
 //password at least 5 characters
 let pwLength = password.length >= 5;
 console.log(pwLength);
 
-//password must not include the username
-let passwordCheck = password !== username;
-console.log(passwordCheck);
+// //password must not include the username - incorrect solution
+// let passwordCheck = password !== username;
+// console.log(passwordCheck);
+
+//correct solution
+let notInclude = !password.includes(username);
+console.log(notInclude);
 
 let usernameLength = username.length <= 20;
 console.log(usernameLength);
 
-//only solution
-let notInclude = !password.includes(username);
-console.log(notInclude)
-
-let whiteSpace = (username.trim() == username) && (password.trim() == password);
+let noWhiteSpace = (username.trim() = username) && (password.trim() = password);
 
