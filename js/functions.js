@@ -96,12 +96,12 @@ console.log(calculateTip(.20,10));
  * then display the dollar amount they should tip
  */
 
-//using the variable to store the value of Bill amount and the Tip amount.
-// let billAmount = prompt("What is your bill total?")
-// let tipAmount = prompt("How much would you like to tip?")
-// //Calling calculateTip with two Arguments and storing it in a variable totalTipAmount
-// let totalTipAmount = calculateTip(tipAmount, billAmount)
-// alert(`Your tip amount is $${totalTipAmount}`)
+using the variable to store the value of Bill amount and the Tip amount.
+let billAmount = prompt("What is your bill total?")
+let tipAmount = prompt("How much would you like to tip?")
+//Calling calculateTip with two Arguments and storing it in a variable totalTipAmount
+let totalTipAmount = calculateTip(tipAmount, billAmount)
+alert(`Your tip amount is $${totalTipAmount}`)
 
 /**
  * TODO:
