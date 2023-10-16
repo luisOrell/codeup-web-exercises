@@ -7,10 +7,8 @@
 // )
 //
 function capitalizeFirstLetter(str) {
-    return str;
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-console.log(capitalizeFirstLetter(str.charAt(0).toUpperCase() + str.slice(1)))
-
-capitalizeFirstLetter(Hello)
+console.log(capitalizeFirstLetter("codeup"));
 
