@@ -67,7 +67,7 @@ function isTwo(number = 2) {
     return number === 2
 }
 
-isTwo(random)
+isTwo(random).log
 
 console.log(isTwo(random))
 /**
@@ -88,7 +88,7 @@ function calculateTip(tipPercentage, priceOfBill) {
     return tipPercentage/100 * priceOfBill
 }
 
-console.log(calculateTip(.20,10));
+console.log(calculateTip(.20,10).toFixed(2));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -96,7 +96,8 @@ console.log(calculateTip(.20,10));
  * then display the dollar amount they should tip
  */
 
-using the variable to store the value of Bill amount and the Tip amount.
+//using the variable to store the value of Bill amount and the Tip amount.
+    //research parseFloat and parseInt
 let billAmount = prompt("What is your bill total?")
 let tipAmount = prompt("How much would you like to tip?")
 //Calling calculateTip with two Arguments and storing it in a variable totalTipAmount
