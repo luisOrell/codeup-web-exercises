@@ -31,8 +31,15 @@
 //
 // capitalizeFirstLetter("testString")
 
-const capitalizeFirstLetter = str => str.substring(0, 1).toUpperCase() + str.substring(1);
+// const capitalizeFirstLetter = str => str.substring(0, 1).toUpperCase() + str.substring(1);
+//
+// console.log(capitalizeFirstLetter("testString"));
 
-console.log(capitalizeFirstLetter("testString"));
+// Largest Number
+function largestNum (num1, num2, num3) {
+    return Math.max(num1, num2, num3)
+}
+
+console.log(largestNum(46, 67, 13));
 
 

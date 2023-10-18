@@ -37,6 +37,12 @@ function analyzeColor(strColor) {
 
 analyzeColor("red");
 
+//*****Class Solution******
+//can use Return keyword or console.log
+
+
+
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -56,21 +62,30 @@ console.log(analyzeColor(randomColor));
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-let analyzeColor = "yellow";
 
-switch(analyzeColor) {
-    case "red" :
-        console.log("Lava is red")
-        break
-    case "green" :
-        console.log("The grass is green")
-        break
-    case "yellow" :
-        console.log("The sun is yellow")
-        break
-    default :
-        console.log("That color is unavailable")
+function analyzeColor(color) {
+
+    switch (analyzeColor) {
+        case ("red"):
+            return "Lava is red"
+            break
+        case ("green"):
+            return "The grass is green"
+            break
+        case ("yellow"):
+            return "The sun is yellow"
+            break
+        default:
+            return "That color is unavailable"
+    }
 }
+console.log(analyzeColor("red"))
+
+//***************class comments************
+//Return keyword-after Return statement, Javascript will end program
+//Using console.log -> You need to use the Break keyword
+
+
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -107,20 +122,21 @@ alert(`You selected ${selectColor}`)
 function calculateTotal (luckyNumber, totalAmount) {
 
     if (luckyNumber === 0) {
-        return (totalAmount + ". Sorry, no discount.")
+        return totalAmount + ". Sorry, no discount."
     } else if (luckyNumber === 1) {
-        return totalAmount - (.10 * totalAmount)
+        return totalAmount - (.10 * totalAmount);
     } else if (luckyNumber === 2) {
-        return totalAmount - (.25 * totalAmount)
+        return totalAmount - (.25 * totalAmount);
     } else if (luckyNumber === 3) {
-        return totalAmount - (.35 * totalAmount)
+        return totalAmount - (.35 * totalAmount);
     } else if (luckyNumber === 4) {
-        return totalAmount - (.50 * totalAmount)
+        return totalAmount - (.50 * totalAmount);
     } else if (luckyNumber === 5) {
         return totalAmount - totalAmount
+    } else {
+        return "Invalid lucky number. Please enter a lucky number between 0-5"
     }
 }
-    return totalAmount - (luckyNumber * totalAmount)
 
 console.log(calculateTotal(1, 90));
 
@@ -141,6 +157,11 @@ alert(`Your lucky number was ${luckyNumber}`);
 alert(`You price before the discount was ${totalBill}`);
 alert("Your price after the discount is " + priceAfterDiscount)
 
+//*********Class Solution**************
+// alert(`Your lucky number is: ${luckyNumber},
+// your total before discount is: $${totalBill},
+// you total after the discount is: ${calculateTotal(luckyNumber, totalBill)}`)
+// //Research parseFloat
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -174,6 +195,42 @@ let addNum = parseInt(pickNumber) + 100
 if(pickNumber > 0) {
     alert("Your number is positive");
 } else alert("Your number is negative")
+
+
+//**************Class Solution: Refactor***************
+
+let userConfirm = confirm("Would you like to enter a number?")
+
+if(userConfirm) {
+    let userInput = parseFloat(prompt("Enter any number")))
+    if(!userInput) {
+        alert("You didnt input a number")
+    } else {
+        return `${num} is an odd number`
+    }
+}
+
+//Even or Odd Function
+function isEvenOdd(num) {
+    if(num % 2 === 0) {
+        return ${num} "is neither even or odd number"
+    } else if(num % 2 === 0){
+        return `${num} is an odd number!`
+    } else if(num % 2 === 1)
+}
+
+// add 100
+function addOneHundred(num) {
+    return `${num} + 100 is ${num + 100}`
+}
+
+
+// pos or neg
+function posNeg(num) {
+    if(num > 0) {
+        return `${num}`
+    }
+}
 
 
 

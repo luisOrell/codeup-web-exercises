@@ -1,27 +1,36 @@
-// let a = 1;
-// let b = a++;
-// let c = ++a;
-// // what is the value of a, b, and c?
-// //a=1 b=1 c=3
-//
-// let d = "hello";
-// let e = false;
-// d++;
-// e++;
-// // d = NaN
-// // e = 0
-//
-// slet perplexed; // perplexed is undefined (no value is assigned)
-// perplexed + 2;
-// //NaN
-//
-// let price = 2.7;
-// price.toFixed(2);
-// //2.70
-//
-// let price = "2.7";
-// price.toFixed(2);
-// //NaN
+//********Question 1*********
+
+let a= 1;
+let b= a++;
+let c= ++a;
+// what is the value of a, b, and c?
+
+//predictions:  a=1 b=1 c=3
+
+
+
+let d = "hello";
+let e = false;
+d++;
+e++;
+// d = NaN
+// e = 0
+
+
+
+let perplexed; // perplexed is undefined (no value is assigned)
+perplexed + 2;
+//NaN
+
+
+let price = 2.7;
+price.toFixed(2);
+//2.70
+
+
+let price = "2.7";
+price.toFixed(2);
+//NaN
 
 //***************************
 isNaN(0)
@@ -87,6 +96,7 @@ NaN == NaN
 
 let sample = 'Hello Codeup';
 console.log(sample.length);
+//Number of characters in the string = 12
 
 // Uppercase
 console.log(sample.toUpperCase());
@@ -103,6 +113,14 @@ console.log(sample);
 // replace students with class
 console.log(sample.replace("Students", "Class"))
 
+//index of "c"
+sample.indexOf("c")
+//-1
+
+//index of "C"
+sample.indexOf("C")
+//value = 6
+
 //**************************Question 3*****************
 //****part A********
 let p = 3
@@ -116,9 +134,9 @@ let googlePerHour = 400;
 let amazonPerHour = 380;
 let facebookPerHour = 350;
 
-let googleHoursWorked = 6
-let amazonHoursWorked = 4
-let facebookHoursWorked = 10
+let googleHoursWorked = 6;
+let amazonHoursWorked = 4;
+let facebookHoursWorked = 10;
 
 let totalPay = (googleHoursWorked * googlePerHour) +
     (amazonHoursWorked * amazonPerHour) +
@@ -126,14 +144,15 @@ let totalPay = (googleHoursWorked * googlePerHour) +
 console.log(totalPay)
 
 //************************Question 4************
-let username = ' codeup ';
-let password = ' notastrongpassword ';
+let username = 'codeup';
+let password = 'notastrongpassword';
 
 //password at least 5 characters
 let pwLength = password.length >= 5;
 console.log(pwLength);
 
-// //password must not include the username - incorrect solution
+//password must not include the username
+// incorrect solution
 // let passwordCheck = password !== username;
 // console.log(passwordCheck);
 
@@ -141,8 +160,10 @@ console.log(pwLength);
 let notInclude = !password.includes(username);
 console.log(notInclude);
 
+//username no more than 20 characters
 let usernameLength = username.length <= 20;
 console.log(usernameLength);
 
-let noWhiteSpace = (username.trim() = username) && (password.trim() = password);
+let noWhiteSpace = (username.trim() === username) && (password.trim() === password);
+console.log(noWhiteSpace);
 
