@@ -1,8 +1,8 @@
 //********Question 1*********
 
-let a= 1;
-let b= a++;
-let c= ++a;
+let a = 1;
+let b = a++;
+let c = ++a;
 // what is the value of a, b, and c?
 
 //predictions:  a=1 b=1 c=3
