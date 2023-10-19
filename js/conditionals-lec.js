@@ -44,16 +44,16 @@
 // const inputedPassword = prompt("Please enter a password")
 
 //next I want to console.log("You're logged in") if username, inputedUsername && password, inputedPassword match)
-// if(username === inputedUsername && password === inputedPassword) {
-//     console.log("You're logged in!")
-// } else if(username !== inputedUsername && password !== inputedPassword) {
-//     console.log("Incorrect username and password")
-// } else if (username !== inputedUsername) {
-//     console.log("Incorrect username")
-// } else if (password !== inputedPassword) {
-//     console.log("Incorrect password")
-// } else {
-//     console.log("Unexpected error")
+if(username === inputedUsername && password === inputedPassword) {
+    console.log("You're logged in!")
+} else if(username !== inputedUsername && password !== inputedPassword) {
+    console.log("Incorrect username and password")
+} else if (username !== inputedUsername) {
+    console.log("Incorrect username")
+} else if (password !== inputedPassword) {
+    console.log("Incorrect password")
+} else {
+    console.log("Unexpected error")
 //}
 
 // Nested Conditional example
