@@ -36,10 +36,19 @@
 // console.log(capitalizeFirstLetter("testString"));
 
 // Largest Number
-function largestNum (num1, num2, num3) {
-    return Math.max(num1, num2, num3)
+// function largestNum (num1, num2, num3) {
+//     return Math.max(num1, num2, num3)
+// }
+//
+// console.log(largestNum(46, 67, 13));
+
+let num = 100
+
+while (num > 0) {
+    num = num - 5;
+    if(num % 2 === 0) {
+        console.log(num + " even")
+    } else console.log(num)
+
 }
-
-console.log(largestNum(46, 67, 13));
-
 
