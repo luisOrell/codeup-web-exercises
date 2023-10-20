@@ -42,13 +42,24 @@
 //
 // console.log(largestNum(46, 67, 13));
 
-let num = 100
+// let num = 100
 
-while (num > 0) {
-    num = num - 5;
-    if(num % 2 === 0) {
-        console.log(num + " even")
-    } else console.log(num)
+// while (num > 0) {
+//     num = num - 5;
+//     if(num % 2 === 0) {
+//         console.log(num + " even")
+//     } else console.log(num)
+//
+// }
 
+function evenNum() {
+    for(let num = 1; num <= 100; num++) {
+        // console.log(num);
+        if(num % 2 === 0) {
+            console.log(num);
+        }
+    }
 }
+
+evenNum();
 
