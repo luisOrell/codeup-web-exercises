@@ -65,14 +65,36 @@
 //*****Oct 23 -> Create an array of at least 5 of your favorite movies. Create a for each loop to console log all of your movies in alphabetical order.
 
 
-const favMovies = ['goodfellas', 'casino', 'apollo13', 'starWars', 'gladiator' ];
-    favMovies.sort()
+// const favMovies = ['goodfellas', 'casino', 'apollo13', 'starWars', 'gladiator' ];
+//     favMovies.sort()
+//
+//     favMovies.forEach(movie => console.log(`Here is one of my favorite movies: ${movie}`))
+//
+//     // favMovies.forEach (movie =>{
+//     //     console.log(movie)
+// })
 
-    favMovies.forEach(movie => console.log(`Here is one of my favorite movies: ${movie}`))
+const cars = [
+    {
+        make: "Honda",
+        model: "Civic",
+        color: "Black"
+    },
+    {
+        make: "Toyota",
+        model: "Supra",
+        color: "Silver"
+    }
+]
 
-    // favMovies.forEach (movie =>{
-    //     console.log(movie)
-})
+// cars.forEach((car) => {
+//     console.log((`Car Make: ${car.make}`))
+//     console.log((`Car model: ${car.model}`))
+//     console.log((`Car color: ${car.color}`))
+// })
 
+
+//using a for of loop
+for (let car of cars) console.log(`Here is an awesome ${car.make} ${car.model} in ${car.color}`)
 
 
