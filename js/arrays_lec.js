@@ -13,7 +13,7 @@
 // // element is itself an array with 3 elements in it
 
 // Storing arrays in variables
-const shapes = ['square', 'rectangle', 'circle', 'triangle'];
+// const shapes = ['square', 'rectangle', 'circle', 'triangle'];
 
 //counting element of an array using .length
 
@@ -21,7 +21,7 @@ const shapes = ['square', 'rectangle', 'circle', 'triangle'];
 //
 // // accessing array element values using the index number
 //
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 //
 // console.log(numbers[0]); // 1
 // console.log(numbers[1]); // 2
@@ -39,9 +39,9 @@ const numbers = [1, 2, 3, 4];
 
 //using for loops to iterate through an array
 //loop through the array and log the values
-for(let i = 0; i < shapes.length; i++) {
-    console.log(`The shape at index ` + `is ` + shapes[i]);
-}
+// for(let i = 0; i < shapes.length; i++) {
+//     console.log(`The shape at index ` + `is ` + shapes[i]);
+//}
 
 //-----using for of loop to iterate through an array----//
 // const iterable = [1, 2, 3, 4, 5];
@@ -91,14 +91,46 @@ for(let i = 0; i < shapes.length; i++) {
 
 
 
-function add (...args) {
-    let total = 0
-    for (let i = 0; i < args.length; i++) {
-        total += args[i];
-    }
-    return total
-}
+// function add (...args) {
+//     let total = 0
+//     for (let i = 0; i < args.length; i++) {
+//         total += args[i];
+//     }
+//     return total
+// }
+//
+// //passing a variosu # of arguments
+// const randNumArr1 = [55, 1, 58, 66, 65];
+// console.log(add(...randNumArr1));
 
-//passing a variosu # of arguments
-const randNumArr1 = [55, 1, 58, 66, 65];
-console.log(add(...randNumArr1));
+const daysOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday']
+
+console.log(daysOfTheWeek)
+
+//Adding elements to an array
+//lets add Sunday
+daysOfTheWeek.unshift('Sunday')
+
+console.log(daysOfTheWeek);
+
+//add Friday and Saturday
+
+daysOfTheWeek.push('Friday', 'Saturday')
+
+console.log(daysOfTheWeek);
+
+
+
+//Removing elements from an array
+const todoList = ['Take out the trash', 'Clean the car', 'Pay the bills'];
+
+console.log(todoList)
+
+const removedItem = todoList.pop();
+console.log('Completing the last item: ' + removedItem)
+
+
+
+
+let slice = colors.slice(2, 4)
+//first parameter will be included, second parameter will be excluded

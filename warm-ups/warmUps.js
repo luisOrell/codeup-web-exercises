@@ -52,14 +52,27 @@
 //
 // }
 
-function evenNum() {
-    for(let num = 1; num <= 100; num++) {
-        // console.log(num);
-        if(num % 2 === 0) {
-            console.log(num);
-        }
-    }
-}
+// function evenNum() {
+//     for(let num = 1; num <= 100; num++) {
+//         // console.log(num);
+//         if(num % 2 === 0) {
+//             console.log(num);
+//         }
+//     }
+// }
+//
+// evenNum();
+//*****Oct 23 -> Create an array of at least 5 of your favorite movies. Create a for each loop to console log all of your movies in alphabetical order.
 
-evenNum();
+
+const favMovies = ['goodfellas', 'casino', 'apollo13', 'starWars', 'gladiator' ];
+    favMovies.sort()
+
+    favMovies.forEach(movie => console.log(`Here is one of my favorite movies: ${movie}`))
+
+    // favMovies.forEach (movie =>{
+    //     console.log(movie)
+})
+
+
 

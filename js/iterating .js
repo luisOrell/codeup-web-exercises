@@ -1,6 +1,4 @@
-
-
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -10,6 +8,7 @@
      */
 
     let names = ['David', 'Stephanie', 'Jasmine', 'Jose'];
+    console.log(names)
 
     /**
      * TODO:
@@ -24,25 +23,39 @@
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-   console.log(names[0])
-   console.log(names[1])
-   console.log(names[2])
-   console.log(names[3])
+    console.log(names[0])
+    console.log(names[1])
+    console.log(names[2])
+    console.log(names[3])
 
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-    for(let i = 0; i < names.length; i++) {
-        console.log(`The name at index ${i} is ${names[i]}`);
+    for (let i = 0; i < names.length; i++) {
+        // console.log(`The name at index ${i} is ${names[i]}`);
+        console.log(names[i]);
     }
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-names.forEach(name => console.log(`Here is the name ` + name))
+
+    //for each loop with arrow function
+// names.forEach(name => console.log(`Here is the name ` + name))
+
+
+    //for each loop
+// names.forEach(function (name)) {
+//     console.log(name);
+//     })
+    //for each loop
+    for (let name of names) {
+        console.log(name)
+    }
+
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -57,19 +70,23 @@ names.forEach(name => console.log(`Here is the name ` + name))
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    function firstName (arr) {
-        console.log(names[0]);
+    function firstName(arr) {
+        return arr[0];
     }
-    firstName(names)
 
-    function secondName (arr) {
-        console.log(names[1]);
+    function secondName(arr) {
+        return arr[1];
     }
-    secondName(names)
 
-    function lastName (arr) {
-        console.log(names[names.length - 1]);
+    function lastName(arr) {
+        return arr[arr.length - 1];
     }
-    lastName(names)
+
+    console.log(firstName(names));
+    console.log(secondName(names));
+    console.log(lastName(names));
 
 })();
+
+
+///// Command, Option, + L to reorganize code
