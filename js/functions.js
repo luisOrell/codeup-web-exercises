@@ -14,7 +14,6 @@ function sayHello(name) {
 }
 
 console.log(sayHello("Mike"));
-console.log(sayHello("Leslie"));
 
 /**
  * TODO:
@@ -24,7 +23,6 @@ console.log(sayHello("Leslie"));
  * console.log 'helloMessage' to check your work
  */
 
-sayHello("Luis");
 let helloMessage = sayHello("Luis")
 
 console.log(helloMessage)
@@ -37,9 +35,9 @@ console.log(helloMessage)
  */
 
 let myName = "Luis";
-sayHello(myName);
 
-console.log(myName)
+console.log(sayHello(myName));
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -63,13 +61,13 @@ const random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number = 2) {
-    return number === 2
+
+function isTwo(number) {
+    return number === 2;
 }
 
-isTwo(random).log
-
 console.log(isTwo(random))
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -81,14 +79,13 @@ console.log(isTwo(random))
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-//When declaring a function, it takes parameters
 
-//Below calculateTip function is being declared.
-function calculateTip(tipPercentage, priceOfBill) {
-    return tipPercentage/100 * priceOfBill
+function calculateTip(tipPercent, billTotal) {
+    return tipPercent * billTotal
 }
 
-console.log(calculateTip(.20,10).toFixed(2));
+console.log(calculateTip(.20, 60).toFixed(2));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -97,12 +94,12 @@ console.log(calculateTip(.20,10).toFixed(2));
  */
 
 //using the variable to store the value of Bill amount and the Tip amount.
-    //research parseFloat and parseInt
+
 let billAmount = prompt("What is your bill total?")
 let tipAmount = prompt("How much would you like to tip?")
 //Calling calculateTip with two Arguments and storing it in a variable totalTipAmount
 let totalTipAmount = calculateTip(tipAmount, billAmount)
-alert(`Your tip amount is $${totalTipAmount}`)
+alert(`Your tip amount is $${totalTipAmount.toFixed(2)}`)
 
 /**
  * TODO:
@@ -119,10 +116,10 @@ alert(`Your tip amount is $${totalTipAmount}`)
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(price, discount) {
-    return price - (price * discount/100)
+    return price - (price * discount / 100)
 }
 
-console.log(applyDiscount(80, 25));
+console.log(applyDiscount(100, 25).toFixed(2));
 
 
 

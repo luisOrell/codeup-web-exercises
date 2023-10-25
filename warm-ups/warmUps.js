@@ -87,14 +87,14 @@ const cars = [
     }
 ]
 
-// cars.forEach((car) => {
-//     console.log((`Car Make: ${car.make}`))
-//     console.log((`Car model: ${car.model}`))
-//     console.log((`Car color: ${car.color}`))
-// })
+cars.forEach((car) => {
+    console.log((`Car Make: ${car.make}`))
+    console.log((`Car model: ${car.model}`))
+    console.log((`Car color: ${car.color}`))
+})
 
 
 //using a for of loop
-for (let car of cars) console.log(`Here is an awesome ${car.make} ${car.model} in ${car.color}`)
+// for (let car of cars) console.log(`Here is an awesome ${car.make} ${car.model} in ${car.color}`)
 
 

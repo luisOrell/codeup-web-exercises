@@ -1,16 +1,7 @@
 "use strict"
 
 
-//--------First Attempt-------
-// function showMultiplicationTable(num, i) {
-//     return num * i
-// }
-//
-// let num = 1
-//
-// for(let i = 0; i <= 10; i++) {
-//     console.log(showMultiplicationTable(i * num))
-// }
+
 
 
 //----------Exercise# 2---------
@@ -59,14 +50,14 @@
 // } }
 
 //------Working Solution
-// for(let i = 0; i < 10; i++) {
-//     let random = (Math.floor(Math.random() * ((200-20)+1) + 20)
-//     if(random % 2 === 0) {
-//         console.log(`${random} is even`)
-//     } else {
-//         console.log(`${random} is odd`)
-//     }
-// }
+for(let i = 0; i < 10; i++) {
+    let random = (Math.floor(Math.random() * ((200-20)+1) + 20))
+    if(random % 2 === 0) {
+        console.log(`${random} is even`)
+    } else {
+        console.log(`${random} is odd`)
+    }
+}
 
 
 

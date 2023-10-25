@@ -22,44 +22,36 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(strColor) {
-    if (strColor === "red") {
-        return "Lava is red"
-    } else if (strColor === "green") {
-        return "Grass is green"
-    } else if (strColor === "blue") {
-        return "The sky is blue"
-    } else if (strColor === "yellow") {
-        return "The sun is yellow"
-    } else {
-        return "Your color is not available"
-    }
-}
+// function analyzeColor(strColor) {
+//     if (strColor === "red") {
+//         return "Lava is red"
+//     } else if (strColor === "green") {
+//         return "Grass is green"
+//     } else if (strColor === "blue") {
+//         return "The sky is blue"
+//     } else if (strColor === "yellow") {
+//         return "The sun is yellow"
+//     } else {
+//         return "Your color is not available"
+//     }
+// }
 
-console.log(analyzeColor(strColor))
-
-
-
-//*****Class Solution******
-//can use Return keyword or console.log
-
+// console.log(analyzeColor("green"))
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-// const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-// const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//
-// console.log(colors)
+const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-console.log(analyzeColor(randomColor));
 
+// console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
@@ -67,27 +59,22 @@ console.log(analyzeColor(randomColor));
 
 function analyzeColor(color) {
 
-    switch (analyzeColor) {
-        case ("red"):
+    switch (color) {
+        case("red"):
             return "Lava is red"
-            break
+
         case ("green"):
             return "The grass is green"
-            break
+
         case ("yellow"):
             return "The sun is yellow"
-            break
+
         default:
             return "That color is unavailable"
     }
 }
 
-console.log(analyzeColor("red"))
-
-//***************class comments************
-//Return keyword-after Return statement, Javascript will end program
-//Using console.log -> You need to use the Break keyword
-
+console.log(analyzeColor("yellow"))
 
 /**
  * TODO:
@@ -95,9 +82,10 @@ console.log(analyzeColor("red"))
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let selectColor = prompt("Select a color")
-console.log(analyzeColor(selectColor));
-alert(`You selected ${selectColor}`)
+// let selectColor = prompt("Select a color")
+//
+// alert(`You selected ${selectColor}`)
+
 
 /* ########################################################################## */
 
@@ -120,8 +108,6 @@ alert(`You selected ${selectColor}`)
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-
-
 function calculateTotal(luckyNumber, totalAmount) {
 
     if (luckyNumber === 0) {
@@ -143,6 +129,7 @@ function calculateTotal(luckyNumber, totalAmount) {
 
 console.log(calculateTotal(1, 90));
 
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
@@ -152,7 +139,7 @@ console.log(calculateTotal(1, 90));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// const luckyNumber = Math.floor(Math.random() * 6);
+const luckyNumber = Math.floor(Math.random() * 6);
 
 let totalBill = prompt("What is your bill total");
 let priceAfterDiscount = calculateTotal(luckyNumber, totalBill)
@@ -160,11 +147,6 @@ alert(`Your lucky number was ${luckyNumber}`);
 alert(`You price before the discount was ${totalBill}`);
 alert("Your price after the discount is " + priceAfterDiscount)
 
-//*********Class Solution**************
-// alert(`Your lucky number is: ${luckyNumber},
-// your total before discount is: $${totalBill},
-// you total after the discount is: ${calculateTotal(luckyNumber, totalBill)}`)
-// //Research parseFloat
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -183,36 +165,20 @@ alert("Your price after the discount is " + priceAfterDiscount)
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let askForNumber = confirm("Would you like to enter a number?")
-let pickNumber = prompt("Pick a number")
-if (pickNumber % 2 === 0) {
-    alert("Your number is even")
-} else if (pickNumber % 2 !== 0) {
-    alert("Your number is odd")
-} else {
-    alert("You've entered invalid data")
-}
-
-let addNum = parseInt(pickNumber) + 100
-alert(`Your number plus 100 is ${addNum}`)
-if (pickNumber > 0) {
-    alert("Your number is positive");
-} else alert("Your number is negative")
-
-
-//**************Class Solution: Refactor***************
 
 let userConfirm = confirm("Would you like to enter a number?")
 
 if (userConfirm) {
     let userInput = parseFloat(prompt("Enter any number"))
-)
+
     if (!userInput) {
         alert("You didnt input a number")
     } else {
         return `${num} is an odd number`
     }
 }
+
+
 
 //Even or Odd Function
 function isEvenOdd(num) {
@@ -235,9 +201,3 @@ function posNeg(num) {
         return `${num}`
     }
 }
-
-
-
-
-
-

@@ -43,15 +43,17 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    //for each loop with arrow function
-// names.forEach(name => console.log(`Here is the name ` + name))
+    names.forEach((name) => {
+        console.log(name)
+    })
 
 
     //for each loop
 // names.forEach(function (name)) {
 //     console.log(name);
 //     })
-    //for each loop
+
+
     for (let name of names) {
         console.log(name)
     }
