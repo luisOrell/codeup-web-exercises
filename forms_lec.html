@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Lecture</title>
+</head>
+<body>
+<!--Form Tags-->
+<!--Container to hold forms-->
+
+<!--GIT-Get information-->
+<!--POST - Post information to database-->
+
+<form method="POST" action="https://request-inspector.glitch.me/">
+<!-- action: Where that info is going-->
+
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" placeholder="user name" value="">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="password">
+    <br>
+
+    <label for="txtarea">Text Area</label>
+    <textarea id="txtarea" name="comment"></textarea>
+
+    <input type="submit">
+    <button type="submit">Enter</button>
+
+    <br>
+
+    <label for="check">Check Box</label>
+    <br>
+    <input id="check" name="newsletter_signup" value="true" type="checkbox" checked>Sign up For The Email Newsletter
+
+    <br>
+
+    A <input type="radio" name="quiz_question1" value="a"><br>
+    B <input type="radio" name="quiz_question1" value="b" checked><br>
+    C <input type="radio" name="quiz_question1" value="c"><br>
+    D <input type="radio" name="quiz_question1" value="d"><br>
+
+    <select name="coffee_preference">
+        <option value="light">Light Roast</option>
+        <option value="dark" selected>Dark Roast</option>
+        <option value="espresso">Espresso Blend</option>
+    </select>
+<!--info in the VALUE attribute is what gets posted to the database-->
+    <br>
+
+    <input type="hidden" name="user_id" value="432">
+
+</form>
+
+</body>
+</html>
