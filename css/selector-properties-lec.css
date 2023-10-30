@@ -1,0 +1,95 @@
+/*select element by name(element name)*/
+h1 {
+    color: gold;
+    text-align: center;
+}
+
+/*calling the element by the ID*/
+#header2 {
+    color: darkblue;
+}
+
+/*calling the element by the class name*/
+.content {
+    background-color: lightgray;
+}
+
+h1, .content {
+    font-weight: lighter;
+}
+
+.fancy-header {
+    font-family: cursive;
+}
+
+.extra-large {
+    color: red;
+}
+
+/*Descendent Selector*/
+#container h1 {
+    color:blue;
+}
+
+/*Direct-child selector*/
+#container>p {
+    background-color: #ABC;
+}
+
+/*Combining selectors*/
+h1.content {
+    color:yellow;
+    text-indent: 50px ;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: gold;
+    font-size: 25px;
+}
+
+a:active {
+    color: cyan;
+}
+
+#color{
+    /*color: brown;*/
+    /*color: rgb(255, 0, 0)*/
+    color: #318c7a;
+    text-decoration: underline;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+html {
+    background-image: url("../img/city.jpeg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.78)
+}
+
+ol {
+    /*list-style: none;*/
+    list-style: square;
+}
+
+p {
+    border: 5px solid red;
+}
+
+em {
+    border: inherit;
+}
+
+
