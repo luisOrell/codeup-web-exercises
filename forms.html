@@ -8,8 +8,8 @@
 <form method="POST" action="https://request-inspector.glitch.me/">
 
     <label for="email">E-mail</label>
-    <input id="email" name="email" type="text" placeholder="Enter email">
-
+    <input id="email" name="email" type="text" placeholder="user@email.com">
+    <br>
 
     <label for="password">Password</label>
     <input id="password" name="password" type="password" placeholder="password">
@@ -17,15 +17,15 @@
 
     <br>
 
-    <label for="txtarea">Bio</label>
-    <textarea id="txtarea" name="bio"></textarea>
+    <label for="bio">Bio</label>
+    <textarea id="bio" name="bio" placeholder="Enter your bio"></textarea>
 
     <br>
 
-    <p>How did you hear about us?</p>
+    <h4>How did you hear about us?</h4>
 
     <label>Billboard</label>
-    <input type="checkbox" name="hear_about_us" value="billboard"><br>
+    <input id="billboard" type="checkbox" name="hear_about_us" value="billboard"><br>
     <label>Radio Advertisement</label>
     <input type="checkbox" name="hear_about_us" value="radio advertisement"><br>
     <label>Internet Advertisement</label>
@@ -35,11 +35,11 @@
 
     <br>
 
-    <p>Which browser are you currently using?</p>
-    <select name="web browser">
-        <option value="chrome">Chrome</option>
-        <option value="firefox">Firefox</option>
-        <option value="internet explorer">Internet Explorer</option>
+    <h4>Which browser are you currently using?</h4>
+    <select name="web_browser" id="web_browser">
+        <option name="chrome" id="chrome" value="chrome">Chrome</option>
+        <option name="firefox" id="firefox" value="firefox">Firefox</option>
+        <option name="internet_explorer" id="internet_explorer" value="internet explorer">Internet Explorer</option>
     </select>
 
     <br>
