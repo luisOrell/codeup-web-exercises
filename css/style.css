@@ -14,6 +14,8 @@ html {
     background-color: darkseagreen;
     background-image: url("../img/background_orange.jpeg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-style: italic;
 
 }
@@ -22,18 +24,22 @@ img {
     border-radius: 8px;
 }
 
-ul {
+ul, ol {
     list-style: circle ;
 }
 
 table, th, td {
     border: 1px solid;
+    border-style: groove;
+    border-color: darkblue;
     font-size: 16px;
-    padding: ;
+    padding-top: 20px
+
 }
 
-th {
-    padding-top: 20px
+thead {
+    background-color: grey;
+    color: white;
 }
 
 a:link {
@@ -50,4 +56,13 @@ a:hover {
 
 a:active{
     color: black;
+}
+
+header {
+    background-color:
+    color:
+    text-align: center
+    font-family:
+    font-size:
+
 }
