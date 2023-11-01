@@ -6,34 +6,65 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 
-div {
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 4px;
+.message {
+    border: 2px solid lightgrey;
+    padding: .5em;
+    border-radius: 8px;
+    margin: 8px;
 
 }
 
-.message-message-info {
-    border: 1px solid black;
-    background-color: #BAE3F5;
-    color: #514CA6;
+/*.message-message-info {*/
+/*    background-color: #BAE3F5;*/
+/*    color: #514CA6;*/
 
+/*}*/
+
+/*.message-message-success, div {*/
+/*    background-color: #CFF3DA;*/
+/*    color:#5C9F74;*/
+/*    margin-top: 10px;*/
+
+/*}*/
+
+/*.message-message-warning {*/
+/*    margin-bottom: 10px;*/
+/*    background-color: #FCFBC9;*/
+/*    color: #B7AA5D;*/
+/*}*/
+
+/*.message-message-error {*/
+/*    background-color: #FAD2D6;*/
+/*    color:#993C50;*/
+/*}*/
+
+:root {
+    --text-info: #514CA6;
+    --bg-info: #BAE3F5;
+    --text-success: #5C9F74;
+    --bg--success: #CFF3DA;
+    --text-warning: #B7AA5D;
+    --bg-warning: #FCFBC9;
+    --text-error:#993C50;
+    --bg-error:#FAD2D6;
 }
 
-.message-message-success, div {
-    background-color: #CFF3DA;
-    color:#5C9F74;
-    margin-top: 10px;
-
+.message-info {
+    color: var(--text-info);
+    background-color: var(--bg-info);
 }
 
-.message-message-warning {
-    margin-bottom: 10px;
-    background-color: #FCFBC9;
-    color: #B7AA5D;
+.message-success{
+    background-color: var(--bg--success);
+    color: var(--text-success);
 }
 
-.message-message-error {
-    background-color: #FAD2D6;
-    color:#993C50;
+.message-warning{
+    background-color:var(--bg-warning);
+    color: var(--text-warning);
+}
+
+.message-error{
+    background-color: var(--bg-error);
+    color: var(--text-error);
 }

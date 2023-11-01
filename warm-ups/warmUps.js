@@ -74,27 +74,85 @@
 //     //     console.log(movie)
 // })
 
-const cars = [
-    {
-        make: "Honda",
-        model: "Civic",
-        color: "Black"
-    },
-    {
-        make: "Toyota",
-        model: "Supra",
-        color: "Silver"
-    }
-]
-
-cars.forEach((car) => {
-    console.log((`Car Make: ${car.make}`))
-    console.log((`Car model: ${car.model}`))
-    console.log((`Car color: ${car.color}`))
-})
+// const cars = [
+//     {
+//         make: "Honda",
+//         model: "Civic",
+//         color: "Black"
+//     },
+//     {
+//         make: "Toyota",
+//         model: "Supra",
+//         color: "Silver"
+//     }
+// ]
+//
+// cars.forEach((car) => {
+//     console.log((`Car Make: ${car.make}`))
+//     console.log((`Car model: ${car.model}`))
+//     console.log((`Car color: ${car.color}`))
+// })
 
 
 //using a for of loop
 // for (let car of cars) console.log(`Here is an awesome ${car.make} ${car.model} in ${car.color}`)
+
+// Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
+//
+//     Data Structure/Example Input:
+    let developers = [
+        {
+            name: "Jonathan",
+            languages: {
+                frontend: ["HTML", "JavaScript", "CSS"],
+                backend: ["Java"]
+            }
+        },
+        {
+            name: "Bonnie",
+            languages: {
+                frontend: ["JavaScript"],
+                backend: []
+            }
+        },
+        {
+            name: "Raj",
+            languages: {
+                frontend: [],
+                backend: ["C#", "Java", "Python"]
+            }
+        },
+        {
+            name: "Carmen",
+            languages: {
+                frontend: ["JavaScript", "HTML", "CSS", "React"],
+                backend: ["C#", "Java", "Python", "TypeScript"]
+            }
+        },
+    ]
+
+function jsDevs (arr) {
+    let devs = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].languages.frontend.includes("JavaScript")) {
+           devs.push(arr[i].name);
+        }
+    }
+    return devs
+}
+console.log(jsDevs(developers));
+
+
+// const knowsJavaScript = (arr) => {
+//     let javaScriptDevs = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr[i].languages.frontend.length; j++) {
+//             if(arr[i].languages.frontend[j] === "Javascript") {
+//                 javaScriptDevs.push(arr[i].name)
+//             }
+//         }
+//     }
+//     return javaScriptDevs;
+// }
 
 
