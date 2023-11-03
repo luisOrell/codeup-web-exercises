@@ -100,47 +100,47 @@
 // Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
 //
 //     Data Structure/Example Input:
-    let developers = [
-        {
-            name: "Jonathan",
-            languages: {
-                frontend: ["HTML", "JavaScript", "CSS"],
-                backend: ["Java"]
-            }
-        },
-        {
-            name: "Bonnie",
-            languages: {
-                frontend: ["JavaScript"],
-                backend: []
-            }
-        },
-        {
-            name: "Raj",
-            languages: {
-                frontend: [],
-                backend: ["C#", "Java", "Python"]
-            }
-        },
-        {
-            name: "Carmen",
-            languages: {
-                frontend: ["JavaScript", "HTML", "CSS", "React"],
-                backend: ["C#", "Java", "Python", "TypeScript"]
-            }
-        },
-    ]
+//     let developers = [
+//         {
+//             name: "Jonathan",
+//             languages: {
+//                 frontend: ["HTML", "JavaScript", "CSS"],
+//                 backend: ["Java"]
+//             }
+//         },
+//         {
+//             name: "Bonnie",
+//             languages: {
+//                 frontend: ["JavaScript"],
+//                 backend: []
+//             }
+//         },
+//         {
+//             name: "Raj",
+//             languages: {
+//                 frontend: [],
+//                 backend: ["C#", "Java", "Python"]
+//             }
+//         },
+//         {
+//             name: "Carmen",
+//             languages: {
+//                 frontend: ["JavaScript", "HTML", "CSS", "React"],
+//                 backend: ["C#", "Java", "Python", "TypeScript"]
+//             }
+//         },
+//     ]
 
-function jsDevs (arr) {
-    let devs = [];
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i].languages.frontend.includes("JavaScript")) {
-           devs.push(arr[i].name);
-        }
-    }
-    return devs
-}
-console.log(jsDevs(developers));
+// function jsDevs (arr) {
+//     let devs = [];
+//     for(let i = 0; i < arr.length; i++) {
+//         if(arr[i].languages.frontend.includes("JavaScript")) {
+//            devs.push(arr[i].name);
+//         }
+//     }
+//     return devs
+// }
+// console.log(jsDevs(developers));
 
 
 // const knowsJavaScript = (arr) => {
@@ -154,5 +154,58 @@ console.log(jsDevs(developers));
 //     }
 //     return javaScriptDevs;
 // }
+
+function newFunction (arrOfElements, bgColor, textColor) {
+    for (let i = 0; arrOfElements.length; i++) {
+        arrOfElements[i].style.backgroundColor = bgColor;
+        arrOfElements[i].style.color = textColor;
+    }
+    return arrOfElements;
+}
+    console.log(newFunction(elements, "purple", "gold"));
+
+//     return {
+//         element: arrOfElements[0],
+//         style: bgColor,
+//         color: textColor
+//     }
+// }
+
+let elements = [
+    {
+        el: "button",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Submit"
+    },
+    {
+        el: "p",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Our company is better at doing company things than your company."
+    },
+    {
+        el: "h2",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Welcome Back!"
+    }
+];
+
+
+
+
+
+
+
+
+
+
 
 
