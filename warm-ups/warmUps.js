@@ -155,14 +155,14 @@
 //     return javaScriptDevs;
 // }
 
-function newFunction (arrOfElements, bgColor, textColor) {
-    for (let i = 0; arrOfElements.length; i++) {
-        arrOfElements[i].style.backgroundColor = bgColor;
-        arrOfElements[i].style.color = textColor;
-    }
-    return arrOfElements;
-}
-    console.log(newFunction(elements, "purple", "gold"));
+// function newFunction (arrOfElements, bgColor, textColor) {
+//     for (let i = 0; arrOfElements.length; i++) {
+//         arrOfElements[i].style.backgroundColor = bgColor;
+//         arrOfElements[i].style.color = textColor;
+//     }
+//     return arrOfElements;
+// }
+//     console.log(newFunction(elements, "purple", "gold"));
 
 //     return {
 //         element: arrOfElements[0],
@@ -171,39 +171,48 @@ function newFunction (arrOfElements, bgColor, textColor) {
 //     }
 // }
 
-let elements = [
-    {
-        el: "button",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Submit"
-    },
-    {
-        el: "p",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Our company is better at doing company things than your company."
-    },
-    {
-        el: "h2",
-        style: {
-            backgroundColor: "white",
-            color: "black"
-        },
-        content: "Welcome Back!"
+// let elements = [
+//     {
+//         el: "button",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Submit"
+//     },
+//     {
+//         el: "p",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Our company is better at doing company things than your company."
+//     },
+//     {
+//         el: "h2",
+//         style: {
+//             backgroundColor: "white",
+//             color: "black"
+//         },
+//         content: "Welcome Back!"
+//     }
+// ];
+
+
+    for (let i = 0; i <= 100; i++) {
+        if(i % 5 === 0 && i % 3 === 0) {
+            console.log("FizzBuzz");
+        }
+        else if( i % 3 === 0) {
+                console.log("Fizz")
+        }
+        else if (i % 5 === 0) {
+            console.log("Buzz");
+        }
+        else {
+            console.log(i)
+        }
     }
-];
-
-
-
-
-
-
-
 
 
 

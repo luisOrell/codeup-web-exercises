@@ -1,5 +1,5 @@
 .fancy-header {
-    color: greenyellow;
+    color: whitesmoke;
 }
 
 h1 {
@@ -34,7 +34,6 @@ table, th, td {
     border-color: darkblue;
     font-size: 16px;
     padding-top: 20px
-
 }
 
 thead {
@@ -59,10 +58,8 @@ a:active{
 }
 
 header {
-    background-color:
-    color:
-    text-align: center
-    font-family:
-    font-size:
-
+    background-color: rgba(49, 28, 16, 0.56);
+    color: #AABBCC;
+    text-align: center;
+    font-family: fantasy;
 }
