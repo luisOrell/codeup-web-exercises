@@ -7,8 +7,32 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
+
+}
+
+.card {
+    margin: auto;
 }
 
 .tab-pane fade show active {
     width: 100%;
+}
+
+#choose_size {
+    background-color:#0C6DFD;
+    color: white;
+    height: 100%;
+    padding: 5px;
+}
+
+.btn-primary {
+    display: inline-block;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#button_background {
+    background-color: grey;
 }
