@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+
 }
 
 a {
@@ -8,12 +9,13 @@ a {
     color: black;
 }
 
-.container {
+nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: #C1C1C1;
     width: 100%;
+    order:1;
 }
 
 .list {
@@ -22,14 +24,17 @@ a {
     list-style-type: none;
     margin-top: 5px;
     margin-left: 0;
+    padding: 0 20px;
 }
 
 li {
-    padding: 10px;
     font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 6px;
 }
 
-ul li:nth-child(5) {
+nav ul li:nth-child(5) {
     margin-left: auto;
 }
 
@@ -42,101 +47,15 @@ nav a:hover {
     font-family: 'Montserrat', sans-serif;
     padding-top: 0.2em;
     font-size: 3em;
-    width: 50px;
-    position: absolute;
+    width: 25px;
     top: 0;
-    right: 600px;
-}
-
-.container2 {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+
 }
 
-.social-media-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    position: absolute;
-    top: 15px;
+.social-media-links > a {
+    margin: 5px;
+
 }
 
 
-/******Previous Code*/
-/** {*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*body {*/
-/*    margin: 0;*/
-/*}*/
-
-/*a {*/
-/*    display: inline-block;*/
-/*}*/
-
-/*nav ul li:nth-child(5) {*/
-/*    margin-left: auto;*/
-/*}*/
-
-/*nav {*/
-/*    background-color: grey;*/
-/*}*/
-
-/*ul {*/
-/*    list-style: none;*/
-/*    !*padding:0;*!*/
-/*    !*margin: 0;*!*/
-/*    display: flex;*/
-/*    justify-content: flex-start;*/
-/*}*/
-
-/*nav a{*/
-/*    color:black;*/
-/*    display: inline-block;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*    flex-direction: row;*/
-/*    padding: 1px;*/
-/*    text-decoration: none;*/
-/*    margin-left: 0;*/
-
-/*}*/
-
-
-/*nav a:hover {*/
-/*    color: blue;*/
-
-
-/*}*/
-
-/*.container {*/
-/*    color :black;*/
-/*    !*width: 95%;*!*/
-/*    !*margin: 0 auto;*!*/
-/*    display: flex;*/
-/*    !*flex-direction: column;*!*/
-/*    justify-content: flex-start;*/
-/*    !*position: relative;*!*/
-/*}*/
-
-/*.social-media-links {*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*    align-items: flex-start;*/
-
-/*}*/
-
-/*.list {*/
-/*    padding: 10px;*/
-/*    font-family: 'Work Sans', sans-serif;*/
-/*}*/
-
-/*.logo-div{*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*    padding-top: 0.2em;*/
-/*    font-size: 3em;*/
-/*}*/
