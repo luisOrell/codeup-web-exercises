@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attributes and CSS</title>
+</head>
+<body>
+<header class="border text-center sans-serif">
+    <h1>Attributes and CSS in JS</h1>
+</header>
+<p id="text">Hello World!</p>
+<style>
+    .border {
+        border: 1px solid black;
+        border-radius: 7px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .sans-serif {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+    .background-color  {
+        background-color: antiquewhite;
+    }
+</style>
+<script>
+<!--    Using innerHTML-->
+    const header = document.querySelector("header");
+    console.log(header.innerHTML);
+    header.innerHTML = "<h1 id ='h1'>The uses of InnerHTML!</h1>" +
+        "<p>You can get and set HTML with innerHTML</p>";
+
+    // Using innerText
+    document.querySelector("h1").innerText = "I control the inner text";
+
+    console.log(header.hasAttribute("id"));
+    const isThereH1 = document.getElementsByTagName("h1")
+    console.log(isThereH1[0].hasAttribute("id"))
+    header.setAttribute("id", "pageHeader");
+    console.log(header.getAttribute("id"));
+
+    console.log(header.classList);
+    header.classList.add("background-color")
+    header.classList.remove("sans-serif")
+
+    header.classList.toggle("background-color");
+
+    let textElement = document.getElementById("text")
+    textElement.style.color = "red"
+    textElement.style.backgroundColor = "black";
+    textElement.style.fontSize = "22px"
+
+
+</script>
+
+</body>
+</html>

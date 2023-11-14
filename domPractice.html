@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="main-heading">Dinner</h1>
+<ul>
+    <li class="dinner-option">Chicken</li>
+    <li class="dinner-option">Steak</li>
+    <li class="dinner-option">Pizza</li>
+    <li class="dinner-option">Chinese</li>
+    <li class="dinner-option">Mexican</li>
+
+</ul>
+
+<h2 id="sub-header">Hello World</h2>
+
+<p class="firstParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam aut delectus et id illo, ratione sequi velit. Ab debitis illum impedit inventore minima, nesciunt qui quia quos rem sapiente.</p>
+
+<p class="secondParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at blanditiis debitis dolor dolores ea expedita fugiat ipsam, nam nisi placeat qui quis ratione soluta temporibus vel velit, veritatis voluptatibus.</p>
+
+<script>
+    const mainHeader = document.getElementById("main-heading");
+
+    mainHeader.innerHTML = "What to choose"
+
+    const subHeader = document.getElementById("sub-header");
+
+    subHeader.style.color = "green"
+
+    const itemsList = document.getElementsByTagName("li")
+    console.log(itemsList);
+
+    for(let i = 0; i < itemsList.length; i++) {
+        if(i % 2 !== 1) {
+            itemsList[i].style.color = "red";
+        }
+    }
+    itemsList[2].setAttribute("style", "color: orange")
+    itemsList[1].style.color = "purple"
+
+    const secPara = document.getElementsByClassName("secondParagraph")
+
+    secPara[0].innerHTML = "Italian"
+
+    const firPara = document.getElementsByClassName("firstParagraph")
+
+    firPara[0].innerHTML = "Mexican"
+
+</script>
+
+
+</body>
+</html>
