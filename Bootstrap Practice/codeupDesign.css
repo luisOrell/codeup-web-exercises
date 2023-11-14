@@ -1,0 +1,25 @@
+body {
+    background-color: #F8F9FA;
+}
+
+
+
+header {
+    background-color: #F0F0F0;
+}
+
+
+
+#red-circle {
+    border-radius: 100px;
+    background: #E5563A;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
