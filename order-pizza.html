@@ -58,20 +58,21 @@
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
                 role="tab" aria-controls="home" aria-selected="true">
-<!--Badge-->
+            <!--Badge-->
             <span class="badge bg-secondary">1</span>
-<!--Badge-->Size and Crust
+            <!--Badge-->Size and Crust
         </button>
     </li>
 
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                role="tab" aria-controls="profile" aria-selected="false">Cheese and Sauce
+                role="tab" aria-controls="profile" aria-selected="false"><span class="badge bg-secondary">2</span>Cheese
+            and Sauce
         </button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
-                role="tab" aria-controls="contact" aria-selected="false">Toppings
+                role="tab" aria-controls="contact" aria-selected="false"><span class="badge bg-secondary">3</span>Toppings
         </button>
     </li>
 </ul>
@@ -81,7 +82,7 @@
 </div>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-<!--hand tossed card-->
+        <!--hand tossed card-->
         <div class="card" style="width: 95%;">
             <div class="card-header">Hand Tossed</div>
             <ul class="list-group list-group-flush">
@@ -90,14 +91,14 @@
                 <li class="list-group-item">
                     <div>
                         <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value=""
-                               aria-label="...">  Small (10")
+                               aria-label="..."> Small (10")
                     </div>
 
                 </li>
                 <li class="list-group-item">
                     <div>
                         <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value=""
-                               aria-label="...">  Medium 12(")
+                               aria-label="..."> Medium 12(")
                     </div>
 
                 </li>
@@ -105,46 +106,181 @@
 
         </div>
         <br>
-<!-- Crispy Thin Card       -->
+        <!-- Crispy Thin Card       -->
         <div class="card" style="width: 95%;">
             <div class="card-header">Crispy Thin</div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-
                 <li class="list-group-item">
                     <div>
                         <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value=""
-                               aria-label="...">  Medium (12")
+                               aria-label="..."> Medium (12")
                     </div>
-
                 </li>
                 <li class="list-group-item">
                     <div>
                         <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value=""
-                               aria-label="...">  Large (14")
+                               aria-label="..."> Large (14")
                     </div>
-
                 </li>
             </ul>
-
-
         </div>
         <br>
-<!--Next-Step Button-->
+        <!--Next-Step Button-->
         <div id="button_background">
-        <button type="button" class="btn btn-primary">Next Step ></button>
+            <button type="button" class="btn btn-primary">Next Step ></button>
         </div>
     </div>
 
 
-
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><span
-            class="badge bg-secondary">2</span></div>
-
-
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><span
-            class="badge bg-secondary">3</span></div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <span class="badge bg-secondary"></span>
+        <!--        Cheese and Sauce Card-->
+        <div class="card" style="width: 95%;">
+            <div class="card-header">Cheese</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">How much?</li>
+                <li class="list-group-item">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light dropdown-toggle w-100" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Normal
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <button class="dropdown-item" type="button">Normal</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Extra</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Extra Extra</button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div>
+                        <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value=""
+                               aria-label="..."> Large (14")
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="card" style="width: 95%;">
+            <div class="card-header">Sauce</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">What type?</li>
+                <li class="list-group-item">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light dropdown-toggle w-100" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Tomato
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <button class="dropdown-item" type="button">Tomato</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Alfredo</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Pesto</button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="list-group-item">How much?</li>
+                <li class="list-group-item">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Normal
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <button class="dropdown-item" type="button">Saucy</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Light</button>
+                            </li>
+                            <li>
+                                <button class="dropdown-item" type="button">Saucy</button>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+<!--        Cheese and Sauce Card-->
+<!--        Toppings Card-->
+<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><span
+        class="badge bg-secondary"></span>
+    <div class="card" style="width: 95%;">
+        <div class="card-header">Choose Meats</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Beef
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Ham
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Philly Steak
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Bacon
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">Choose Non-Meats</li>
+            <li class="list-group-item">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Green Peppers
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Mushrooms
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Onions
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Jalapeño Peppers
+                    </label>
+                </div>
+
+            </li>
+        </ul>
+        </div>
+</div>
+
+<!--Toppings Card-->
 
 
 <script src="https://kit.fontawesome.com/a643e3b6d3.js" crossorigin="anonymous"></script>
