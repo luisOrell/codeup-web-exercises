@@ -37,3 +37,7 @@
 #toggle-btn:hover {
     background-color: #0056b3;
 }
+
+#profile-card.altBackground {
+    background-color: #514CA6;
+}
