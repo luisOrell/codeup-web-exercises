@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+
+        .toggle-color {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main-body">
+<h1>Konami Code</h1>
+
+<p class="msg">Hello World</p>
+
+<form>
+    <label for="textField">Type something:</label><br>
+    <input type="text" id="textField" name="textField" placeholder="Type Here">
+</form>
+
+
+
+<script>
+    "use strict";
+
+    //The Konami Code: Up, Up, Down, Down, Left, Right, Left, Right, B, A ( ↑ ↑ ↓ ↓ ← → ← → B A )
+    const secretCode = [
+        "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"
+    ];
+
+    let secretKeyEntered = 0;
+
+    document.addEventListener("keyup", event => {
+        const key = event.key;
+        console.log(`key pressed: ${event.key}`);
+        if (key === secretCode[secretKeyEntered]) {
+            secretKeyEntered++;
+
+            if (secretKeyEntered === secretCode.length) {
+                // alert("You have added 30 lives!");
+
+                document.querySelector(".main-body").setAttribute("style", "background: black")
+                document.querySelector("h1").setAttribute("style", "color: red")
+
+                setInterval(function () {
+                    document.querySelector(".msg").classList.toggle(".toggle-color")
+                }, 1000);
+
+                secretKeyEntered = 0;
+            }
+        } else {
+            secretKeyEntered = 0;
+        }
+    });
+
+</script>
+</div>
+</body>
+</html>

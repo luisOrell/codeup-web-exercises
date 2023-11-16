@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form>
+    <label for="textField">Type something:</label><br>
+    <input type="text" id="textField" name="textField" placeholder="Type Here">
+</form>
+
+<div class="myBox"></div>
+<div class="myBox"></div>
+<div class="myBox"></div>
+<div class="myBox"></div>
+
+</body>
+<style>
+    .myBox {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+    }
+
+</style>
+
+<script>
+    //Keydown or keypress with an alert
+    document.querySelector('#textField').addEventListener('keypress', () => alert('A key was pushed down!') );
+
+    // a key being released
+    document.querySelector('#textField').addEventListener('keyup', () => alert('A key was released!') );
+
+
+    //pass an argument to the event listener.
+    const myKeyPressFunction = event => console.log(`key pressed: ${event.key}`);
+    document.querySelector("#textField").addEventListener('keypress', myKeyPressFunction);
+
+
+    //this can be used with arrow function
+    const myKeyPressFunction = event => {
+        console.log(`key pressed: ${event.key}`);
+        console.log(event.target);
+    }
+
+    //The argument passed to the listener function always represents the event object. It does not have to be called event. It is often called simply e:
+    const myKeyPressFunction = e => {
+        console.log(`key pressed: ${e.key}`);
+        console.log(e.target);
+    }
+
+    //Note: all the event listener methods we have covered so far apply to single elements. We can add and remove event listeners to multiple elements by using the .querySelectorAll() method and iterating over the resulting array.
+
+
+    document.querySelectorAll(".myBox").forEach( box => {
+        box.addEventListener('mouseenter', ()=> console.log('mouse entered box!'));
+    });
+
+
+</script>
+
+</html>
