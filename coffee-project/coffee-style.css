@@ -1,0 +1,28 @@
+/*#coffees {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*#new-coffee-form {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+*{
+    font-family: Amatic SC, sans-serif;
+}
+
+.coffee-name {
+    font-family: Amatic SC, sans-serif;
+    font-size: 60px;
+}
+
+.coffee-roast {
+    font-family: Amatic SC, sans-serif;
+    font-size: 30px;
+    color: lightgray;
+}
+
+.coffee-type-heading {
+    font-size: 30px;
+}
