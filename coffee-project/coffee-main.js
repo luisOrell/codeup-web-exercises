@@ -59,7 +59,39 @@ const searchCoffeeByName = document.querySelector('#search-coffee-by-name')
 const coffeeSelection = document.querySelector('#coffees');
 const submitButton = document.querySelector('#submit');
 const roastSelection = document.querySelector('#roast-selection');
+//reference to my Add Coffee Button, for add coffee form
+const addCoffeeButton = document.querySelector('#add-coffee');
 
+//render the coffee list shown on the right side of the page
 coffeeSelection.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+//To update coffee list rendered as user types in the input field
+searchCoffeeByName.addEventListener('input', updateCoffees);
+//To update coffee list rendered as user selects roast type
+roastSelection.addEventListener('change', updateCoffees);
+//Event listener to update list upon click add coffee button
+addCoffeeButton.addEventListener('click', addCoffee);
+
+function addCoffee() {
+    //target the roast type selector value
+    const newCoffeeRoast = document.querySelector('#new-coffee-roast').value.toLowerCase();
+    //target the coffee name input value
+    const newCoffeeName = document.querySelector('#new-coffee-name').value.trim();
+    //create a new coffee entry for the coffees object
+    const newCoffee = {
+        id: coffees.length + 1,
+        name: newCoffeeName,
+        roast: newCoffeeRoast,
+    }
+    // add the entry to the array
+    coffees.push(newCoffee);
+    //update the rendered coffee list
+    coffeeSelection.innerHTML = renderCoffees(coffees);
+    //clear the form
+    document.querySelector('#new-coffee-roast').value = 'light';
+    document.querySelector('#new-coffee-name').value = '';
+
+}
+
+
