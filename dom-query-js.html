@@ -35,8 +35,8 @@
 
 //********Change background color of H1 element***********
     // obtain a reference to the target element
-
     // create a handler function
+
     const mainHeader = document.getElementById("main-header");
 
     document.getElementById('main-header').addEventListener("click", () =>
@@ -80,14 +80,18 @@
 
 
     //**********Button 1************//
-    // // obtain a reference to the target element
+    //****** Set innerHTML to 'Javascript is cool'****//
+
+    // obtain a reference to the target element
     // const button1 = document.getElementById("button-1");
     // // create a handler function
     // const mainHeader = document.getElementById("main-header");
-    // const listener = () =>
+    // const listener = () => {
     //     mainHeader.innerHTML = "Javascript is cool!";
+    // }
     // // register the listener to handle clicks on btn1
     // button1.addEventListener('click', listener);
+
 
 
     //********Button 2**********//
@@ -102,7 +106,7 @@
     //*********Button 3*********//
 
     const button3 = document.getElementById("button-3");
-    // const itemsList = document.getElementsByTagName("li");    //uncomment this line
+    // const itemsList = document.getElementsByTagName("li");
     const listener3 = function () {
         for (let i = 0; i < itemsList.length; i++) {
             if (i % 2 !== 1) {
@@ -113,7 +117,7 @@
     button3.addEventListener('click', listener3);
 
     //************Button 4***********
-
+    //Change Paragraph
     const button4 = document.getElementById("button-4")
     const subParagraphs = document.getElementsByClassName("sub-paragraph")
     const listener4 = function () {

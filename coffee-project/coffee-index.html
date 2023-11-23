@@ -13,11 +13,16 @@
 <body>
 
 <div class="container">
-    <h1 class="text-center">Coffee Co!</h1>
+<!--    <h1 class="text-center">Coffee Co!</h1>-->
+    <nav class="navbar heading-color">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 text-light">Coffee Co!</span>
+        </div>
+    </nav>
 
     <div class="row">
         <!--        Left side of Page-->
-        <div class="col-lg-6">
+        <div class="col-lg-6 left-side-column">
             <div id="coffees" class=""></div>
         </div>
 
@@ -39,7 +44,9 @@
                     <label for="search-coffee-by-name" class="coffee-type-heading">Search by Name:</label>
                     <input id="search-coffee-by-name" type="text" placeholder="search coffee">
                     <br>
-                    <input class="mt-2" id="submit" type="submit"/>
+                    <button type="button" class="btn btn-secondary btn-sm " id="submit">Submit</button>
+
+<!--                    <input class="mt-2" id="submit" type="submit"/>-->
                 </form>
                 <br>
                 <hr>
@@ -58,7 +65,9 @@
                     <label for="new-coffee-name" class="coffee-type-heading">Name:</label>
                     <input id="new-coffee-name" type="text" placeholder="Enter coffee name">
                     <br>
-                    <button id="add-coffee">Add Coffee</button>
+<!--                    <button id="add-coffee">Add Coffee</button>-->
+                    <button type="button" class="btn btn-secondary btn-sm" id="add-coffee">Add Coffee</button>
+
                 </div>
             </div>
 

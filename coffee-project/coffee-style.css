@@ -26,3 +26,14 @@
 .coffee-type-heading {
     font-size: 30px;
 }
+
+.heading-color {
+    background: #993C50;
+    border: 10px;
+}
+
+.left-side-column {
+    background-color: #7a7a7a;
+}
+
+

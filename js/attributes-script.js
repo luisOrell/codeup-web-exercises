@@ -1,26 +1,5 @@
 
-//**********//Use setTimout to create these behaviors*************
 
-// setTimeout ( function () {
-//     let newPic = document.getElementById('profile-pic');
-//     newPic.src = "img/background_orange.jpeg"
-// }, 2000)
-//
-// setTimeout ( function () {
-//     let profileName = document.getElementById("profile-name");
-//     profileName.innerHTML = "<h2>John Smith</h2>"
-// }, 4000)
-//
-// setTimeout( function () {
-//     textFontColor = document.getElementById("profile-desc")
-//     textFontColor.style.color = "red";
-//     textFontColor.style.fontSize = "25px";
-// }, 6000)
-//
-// setInterval( function () {
-//     let profileCard = document.getElementById("profile-card");
-//     profileCard.classList.toggle("new-background");
-// }, 2000);
 
 setTimeout( function() {
     let changeProfilePic = document.getElementById("profile-pic");
@@ -46,13 +25,13 @@ setInterval( function () {
 
 
 //****
-const delay = 5000; // delay time in milliseconds
-let htmlElement = document.getElementById(" ")
-
-const timeoutId = function setTimer (variableName, htmlElement, delay) {
-    (`${variableName} = ${htmlElement}`)
-
-}, delay);
+// const delay = 5000; // delay time in milliseconds
+// let htmlElement = document.getElementById(" ")
+//
+// const timeoutId = function setTimer (variableName, htmlElement, delay) {
+//     (`${variableName} = ${htmlElement}`)
+//
+// }, delay);
 
 // to cancel the timeout, you can call
 // clearTimeout(timeoutId);
