@@ -1,3 +1,4 @@
 .idea/*
-*.imlyes
+*.iml
 secret.txt
+js/keys.js

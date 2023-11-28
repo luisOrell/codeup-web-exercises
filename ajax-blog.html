@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div id="posts"></div>
+
+</body>
+
+<script>
+    const postsDiv = document.getElementById('posts');
+
+
+        fetch('data/blog.json')
+            .then(res => res.json())
+            .then(data => data.forEach(blogPost => {
+                const postDiv = document.createElement('div');
+                //another form to add elements
+                postDiv.innerHTML = `
+                <h2>${blogPost.title}</h2>
+                <p>${blogPost.content}</p>
+                <p>${blogPost.date}</p>
+                `
+                postsDiv.appendChild(postDiv)
+
+            })
+            )
+
+
+</script>
+</html>

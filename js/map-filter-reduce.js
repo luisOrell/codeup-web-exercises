@@ -72,7 +72,7 @@ console.log(avgExperience)
 //Problem 5
 //Use .reduce to get the longest email from the list of users
 
-const longestEmail = emails.reduce(longest, email => {
+const longestEmail = emails.reduce((longest, email) => {
     if(email.length > longest.length) {
         return email
     } else {
@@ -80,8 +80,14 @@ const longestEmail = emails.reduce(longest, email => {
     }
 }, "")
 
+console.log(longestEmail);
+
 //Problem 6
 
 let instructors = users.reduce(function(output, user, currentIndex){
-    if(currentIndex === users)
-})
+    if(currentIndex === users.length -1){
+        return `${output} ${user.name}.`
+    }
+    return `${output} ${user.name},`;
+}, "Your instructors are:")
+console.log(instructors)

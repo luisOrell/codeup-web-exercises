@@ -214,21 +214,26 @@
     //     }
     // }
 
- let countFunc = () => {
-    for (let i = 0; i <= 100; i++) {
-        if (i % 5 === 0 && i % 3 === 0) {
-            console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("Fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
-        } else {
-            console.log(i);
-        }
-    }
-}
+//  let countFunc = () => {
+//     for (let i = 0; i <= 100; i++) {
+//         if (i % 5 === 0 && i % 3 === 0) {
+//             console.log("FizzBuzz");
+//         } else if (i % 3 === 0) {
+//             console.log("Fizz");
+//         } else if (i % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+// countFunc()
 
-countFunc()
+fetch('https://pokeapi.co/api/v2/pokemon/blastoise')
+
+.then(res => res.json())
+
+.then(data => createPokemonImg )
 
 
 
