@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div class="container">
+    <form>
+        <div>
+            <img class="img">
+        </div>
+        <input type="text" placeholder="Enter Pokemon" id="input">
+        <input type="submit" id="submitButton">
+    </form>
+</div>
+
+
+</body>
+
+<script>
+
+    // const img = document.querySelector('.container')
+    // const input = document.querySelector('#searchBar').value
+    // const btn = document.querySelector('#submitButton')
+    // btn.addEventListener('submit', function () {
+    //
+    // })
+
+    const img = document.querySelector('.img')
+    const input = document.querySelector('#input').value
+
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/charmander`)
+
+        .then(res => res.json())
+        .then(pokemonData => {
+            console.log(pokemonData)
+            //img.src will target the source of the image
+            img.src = pokemonData.sprites.front_shiny
+        })
+        .catch (error =>
+            console.log("error"))
+</script>
+
+
+</html>

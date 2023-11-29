@@ -15,20 +15,23 @@
     const postsDiv = document.getElementById('posts');
 
 
-        fetch('data/blog.json')
+    fetch('data/blog.json')
             .then(res => res.json())
             .then(data => data.forEach(blogPost => {
-                const postDiv = document.createElement('div');
-                //another form to add elements
-                postDiv.innerHTML = `
-                <h2>${blogPost.title}</h2>
-                <p>${blogPost.content}</p>
-                <p>${blogPost.date}</p>
-                `
-                postsDiv.appendChild(postDiv)
-
+                console.log(data)
+                data.forEach(blogPost => {
+                    const postDiv = document.createElement('div');
+                    //another way to add elements via innerHTML
+                    postDiv.innerHTML = `
+                        <h2>${blogPost.title}</h2>
+                        <p>${blogPost.content}</p>
+                        <p>${blogPost.date}</p>
+                        `
+                    postsDiv.appendChild(postDiv)
+                })
             })
             )
+
 
 
 </script>

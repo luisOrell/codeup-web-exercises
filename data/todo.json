@@ -1,0 +1,19 @@
+[
+  {
+    "title": "first goal",
+    "content": "lorem",
+    "categories": [
+      "api"
+    ],
+    "date": "May 20, 2024"
+  }, {
+    "title": "second goal",
+    "content": "lorem",
+    "categories": [
+      "pay bills",
+      "wash car",
+      "gym"
+    ],
+    "date": "June 28, 2024"
+  }
+]

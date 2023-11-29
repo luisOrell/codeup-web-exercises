@@ -45,9 +45,11 @@
     </main>
 </div>
 
-
 <div>
-    <img class="img">
+    <img id="pokemonImg" alt="blastoise">
+</div>
+<div>
+    <img id="pokemonImg2">
 </div>
 
 <!--Search Pokemon-->
@@ -57,36 +59,36 @@
     <img class="addPokemonImg">
 </div>
 
+<div id="toDos">To do items</div>
+
 <script>
 
-    //target the img inside the div
-    const img = document.querySelector('.img')
+    //target the id of the image inside the div
+    // const pokemonImage = document.querySelector('#pokemonImg')
+    // //fetch with name of pokemon entered at the end
+    // fetch('https://pokeapi.co/api/v2/pokemon/hitmonchan')
+    // //response used to convert information to json format
+    //     .then(res => res.json())
+    //     //obtain pokemon information, data could be named something else if needed
+    //     .then(data => {
+    //         // console.log(pokemonData)
+    //         //img.src will target the source of the image
+    //         //adding img src from the pokemon API
+    //         pokemonImage.src = data.sprites.front_shiny
+    //     })
+    //     .catch (error =>
+    //     console.log("error"))
 
-    fetch('https://pokeapi.co/api/v2/pokemon/blastoise')
+    // const pokemon2 = document.querySelector('#pokemonImg2');
+    //
+    // fetch('https://pokeapi.co/api/v2/pokemon/charmander')
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         console.log(data)
+    //
+    //         pokemon2.src = data.sprites.front_shiny
+    //     })
 
-        .then(res => res.json())
-        .then(pokemonData => {
-            //img.src will target the source of the image
-            img.src = pokemonData.sprites.front_shiny
-        })
-        .catch (error =>
-        console.log("error"))
-
-    fetch(`https://pokeapi.co/api/v2/pokemon/blastoise`)
-
-    //*******Search Pokemon*****
-
-
-    fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
-        .then(res => res.json())
-        .then(data => data)
-
-
-    function createPokemon(data) {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = data.name;
-        const container = document.querySelector()
-    }
 
     //**************
     //Get reference of the form
@@ -116,6 +118,25 @@
     //         event.target.parentElement.remove();
     //     }
     // })
+
+    const toDoItems = document.getElementById('toDos');
+
+    fetch('data/todo.json')
+        .then(res => res.json())
+        .then(data => data.forEach(todoItem => {
+            console.log(data)
+            data.forEach(todoItem => {
+                const addItem = document.createElement('p');
+                addItem.innerHTML = `
+                <h2>${todoItem.title}</h2>
+                <p>${todoItem.content}</p>
+                <p>${todoItem.date}</p>
+            `
+                toDoItems.appendChild(addItem)
+            })
+        })
+        )
+
 
 </script>
 

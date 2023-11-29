@@ -5,6 +5,7 @@
     <style>
         body{
             font-family: NewRodin, sans-serif;
+            background: #318c7a;
         }
         table, tr, td, th {
             border: 1px solid #171d1c
@@ -35,20 +36,19 @@
 <script>
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-const productTable = document.querySelector('#insertProducts');
 
-    function getTools() {
-        fetch('data/inventory.json')
+    const productTable = document.querySelector('#insertProducts');
+
+    fetch('data/inventory.json')
             .then(res => res.json())
-            .then(toolData => {
-                toolData.forEach(tool => {
+            .then(data => {
+                for (let item of data) {
                     const newRow = document.createElement('tr');
                     const title = document.createElement('td');
                     const quantity = document.createElement('td');
                     const categories = document.createElement('td');
                     const price = document.createElement('td');
-                    tool.title;
-                    console.log(tool.title);
+
 
                     title.innerText = item.title;
                     quantity.innerText = item.quantity;
@@ -61,40 +61,13 @@ const productTable = document.querySelector('#insertProducts');
                     newRow.appendChild(categories)
 
                     productTable.appendChild(newRow);
-                })
+                }
             })
-    }
-    getTools();
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-
-    function addData (tool) {
-                //create new row
-                const newTr = document.createElement('tr');
-                newTr.innerHTML = tool.title;
-                const tbody = document.getElementById('insertProducts');
-                //add json contents to new element
-                tbody.appendChild(newTr);
-                console.log('hello2')
-            }
-            addData()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </script>
 
