@@ -1,3 +1,5 @@
+
+
 const weatherOutput = document.querySelector('#forecast')
 
 fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
@@ -8,25 +10,25 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
     .then(result => {
         console.log(result)
 
-    //     result.list.forEach(weather => {
-    //         //date format in seconds, converted to milliseconds
-    //         const date = new Date(weather.dt * 1000);
-    //         //.toLocaleDateString() returns the date as a string, vs time
-    //         console.log(date.toLocaleDateString());
-    //         //create p element
-    //         const time = document.createElement("p")
-    //         const temp = document.createElement("p")
-    //
-    //         //set innertext from date data variable
-    //         time.innerText = date;
-    //         //set innertext from main>temp
-    //         temp.innerText = weather.main.temp;
-    //
-    //         weatherOutput.appendChild(time)
-    //         weatherOutput.appendChild(temp)
-    //
-    //     })
-    // })
+        //     result.list.forEach(weather => {
+        //         //date format in seconds, converted to milliseconds
+        //         const date = new Date(weather.dt * 1000);
+        //         //.toLocaleDateString() returns the date as a string, vs time
+        //         console.log(date.toLocaleDateString());
+        //         //create p element
+        //         const time = document.createElement("p")
+        //         const temp = document.createElement("p")
+        //
+        //         //set innertext from date data variable
+        //         time.innerText = date;
+        //         //set innertext from main>temp
+        //         temp.innerText = weather.main.temp;
+        //
+        //         weatherOutput.appendChild(time)
+        //         weatherOutput.appendChild(temp)
+        //
+        //     })
+        // })
 
         const day = result.list;
 
@@ -34,6 +36,7 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
             const weather = day[i]
             const date = new Date(weather.dt * 1000);
             console.log(date.toLocaleDateString());
+
 
             const time = document.createElement('p');
             const temp = document.createElement('p');
@@ -43,8 +46,6 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
 
             weatherOutput.appendChild(time)
             weatherOutput.appendChild(temp)
-
-            weatherOutput.appendChild(time);
             }
         })
 
