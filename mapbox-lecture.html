@@ -17,6 +17,11 @@
 
 <h1>My First Mapbox Map!</h1>
 
+<!--searchBox-->
+<label for="search"></label>
+<input type="text" id="search">
+<button id="sub" type="button">Search</button>
+
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
 
@@ -72,6 +77,20 @@
             map.setCenter(result);
             map.setZoom(15);
         })
+
+//Search Functionality
+
+    document.getElementById('sub').addEventListener('click', function () {
+        let currentLocation = geocode(document.getElementById('search').value, MAPBOX_API);
+
+        currentLocation.then(result => {
+            console.log(result)
+            map.setCenter([result[0], result[1]])
+        })
+
+
+    })
+
 
 </script>
 </body>

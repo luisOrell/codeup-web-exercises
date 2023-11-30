@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="forecast"></div>
+
+<script src="js/keys.js"></script>
+<script>
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
+          `lat=32.772041032299434&lon=-96.79341763277209` +
+          `&appid=${OPEN_WEATHER_API}` +
+            `&units=imperial`)
+        .then(data => data.json())
+        .then(result => console.log(result))
+</script>
+</body>
+</html>
+
+<!--// 32.772041032299434, -96.79341763277209-->

@@ -16,7 +16,7 @@
 function geocode(search, token) {
     //to fetch mapbox api
     var baseUrl = 'https://api.mapbox.com';
-    //the endpoint when I request lgn and lat based on location name
+    //the endpoint to request longitude and lat based on location name
     var endPoint = '/geocoding/v5/mapbox.places/';
     //fetch request takes in a URL endpoint that will return the lng, lat
     //encodeURIComponent(search) search-ex: recognize spaces in address input text
