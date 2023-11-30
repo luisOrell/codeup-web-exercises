@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>My First Mapbox Map</h1>
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!--Keys to access map api-->
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+
+<!--Mapbox-->
+<script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+
+<script>
+
+    const restaurants = [
+        {
+            name: "Massis Kabbob",
+            latitude: 34.14509033526687,
+            longitude: -118.25849514732158
+
+        },
+        {
+            name: "VIM",
+            latitude: 34.10168969069945,
+            longitude: -118.30142232559766
+        },
+        {
+            name: "Inn-N-Out",
+            latitude: 34.09839728668882,
+            longitude: -118.341106054851
+        }
+    ]
+
+        //grabbing token to gain access
+        mapboxgl.accessToken = MAPBOX_API;
+        //create map
+        const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        // style: 'mapbox://styles/mapbox/satellite-v9',
+        zoom: 10, // starting zoom
+        center: [-118.30152961426703, 34.10168969324162] // [lng, lat]
+    });
+
+        //***Using the Geocode Function***
+
+        // geocode('5132 Hollywood Blvd, Los Angeles, CA 90027', MAPBOX_API)
+        //     //reference for coordinates
+        //     .then(coords => {
+        //         console.log(coords)
+        //         //place a marker
+        //         const marker = new mapboxgl.Marker()
+        //             .setLngLat(coords)
+        //             .addTo(map);
+        //         map.setCenter(coords)
+        //         map.setZoom(17)
+        //         //set pop up
+        //         let popup = new mapboxgl.Popup()
+        //             .setHTML("<p>VIM Restaurant</p>");
+        //         marker.setPopup(popup)
+        //         //zoom control
+        //         const nav = new mapboxgl.NavigationControl();
+        //          map.addControl(nav, 'top-left')
+        //     })
+
+    //***ForEach to iterate the Restaurants array***
+   restaurants.forEach((restaurant, index) => {
+       if(index === restaurants.length - 1) {
+           map.setCenter([restaurant.longtitude, restaurant.latitude]);
+           map.setZoom(15);
+       }
+       const marker = new mapboxgl.Marker()
+           .setLngLat([restaurant.longitude, restaurant.latitude])
+           .addTo(map);
+
+       let popup = new mapboxgl.Popup()
+                   .setHTML(
+                       `<p>${restaurant.name}</p>`
+                   );
+       marker.setPopup(popup)
+    })
+
+</script>
+
+</body>
+</html>
