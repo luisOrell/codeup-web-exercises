@@ -229,12 +229,50 @@
 // }
 // countFunc()
 
-fetch('https://pokeapi.co/api/v2/pokemon/blastoise')
+// fetch('https://pokeapi.co/api/v2/pokemon/blastoise')
+//
+// .then(res => res.json())
+//
+// .then(data => createPokemonImg )
 
-.then(res => res.json())
+function diagonalDifference(arr) {
+    // Write your code here
+    LRarray = [];
+    RLarray = [];
+    LRtotal = 0;
+    RLtotal = 0;
+    arr.map ((num, index) => {
+        // console.log(num)
+        // console.log(index)
+        // console.log(num[index])
+        LRarray.push(num[index]);
+    })
+    // console.log(LRarray)
 
-.then(data => createPokemonImg )
+    arr.reverse().map((num, index) => {
+        // console.log(num[index])
+        RLarray.push(num[index])
+    })
+
+    LRarray.forEach((num) => {
+        LRtotal += num;
+    })
+
+    RLarray.forEach(num => RLtotal += num)
+    // console.log(RLtotal)
+
+    console.log(Math.abs(RLtotal - LRtotal));
+
+}
+
+diagonalDifference([
+                        [11, 2,4 ],
+                        [4, 5, 6],
+                        [10, 8, -12]
+                                    ])
 
 
+//const incremented = numbers.map( n => n + 1 );
+// console.log(incremented); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 

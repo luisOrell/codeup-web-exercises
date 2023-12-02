@@ -59,24 +59,24 @@
 
         //***Using the Geocode Function***
 
-        // geocode('5132 Hollywood Blvd, Los Angeles, CA 90027', MAPBOX_API)
-        //     //reference for coordinates
-        //     .then(coords => {
-        //         console.log(coords)
-        //         //place a marker
-        //         const marker = new mapboxgl.Marker()
-        //             .setLngLat(coords)
-        //             .addTo(map);
-        //         map.setCenter(coords)
-        //         map.setZoom(17)
-        //         //set pop up
-        //         let popup = new mapboxgl.Popup()
-        //             .setHTML("<p>VIM Restaurant</p>");
-        //         marker.setPopup(popup)
-        //         //zoom control
-        //         const nav = new mapboxgl.NavigationControl();
-        //          map.addControl(nav, 'top-left')
-        //     })
+        geocode('5132 Hollywood Blvd, Los Angeles, CA 90027', MAPBOX_API)
+            //reference for coordinates
+            .then(coords => {
+                console.log(coords)
+                //place a marker
+                const marker = new mapboxgl.Marker()
+                    .setLngLat(coords)
+                    .addTo(map);
+                map.setCenter(coords)
+                map.setZoom(17)
+                //set pop up
+                let popup = new mapboxgl.Popup()
+                    .setHTML("<p>VIM Restaurant</p>");
+                marker.setPopup(popup)
+                //zoom control
+                const nav = new mapboxgl.NavigationControl();
+                 map.addControl(nav, 'top-left')
+            })
 
     //***ForEach to iterate the Restaurants array***
    restaurants.forEach((restaurant, index) => {
