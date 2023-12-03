@@ -1,100 +1,123 @@
 
 function weatherCards (lon,lat) {
 
+    let html = "";
+
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}` +
         `&appid=${OPEN_WEATHER_API}` +
         `&units=imperial`)
 
-    // fetch(`https://api.openweathermap.org/data/2.5/forecast?` +
-    //     `lat=32.772041032299434&lon=-96.79341763277209` +
-    //     `&appid=${OPEN_WEATHER_API}` +
-    //     `&units=imperial`)
-
         .then(data => data.json())
-        .then(result => {
-            console.log(result)
+        .then(weatherInfo => {
+            console.log(weatherInfo)
+
+            //City name appended to navbar
+            let city = document.getElementById('city');
+            city.innerHTML = "";
+            city.innerHTML += `<h5>${weatherInfo.city.name}</h5>`;
+
+            let weatherCard = document.getElementById('weather-card');
+
+            for(let i = 0; i <= 39; i += 8) {
+                const date = new Date(weatherInfo.list[i].dt_txt).toDateString();
+                console.log(date)
+                console.log(i)
 
 
+                html += "<section class = 'mx-auto'>"
+                html += "<div class='card'>"
+                html += "<div class='card-header'>"
+                html += "<h6>" + date + "</h6>"
+                html += "<ul ='list-group list-group-flush'>"
+                html += "<p ='list-group-item'>" + weatherInfo.list[i].main.temp_min +  '\u00B0' + "F" + " / " + weatherInfo.list[i].main.temp_max +  '\u00B0' + "F" + "</p>"
+                html += "<p ='list-group-item'>" + weatherInfo.list[i].weather[0].description + "</p>"
+                html += "<p ='list-group-item'>" + "Humidity: " + weatherInfo.list[i].main.humidity + "</p>"
+                html += "<p ='list-group-item'>" + "Wind-Speed: " + weatherInfo.list[i].wind.speed + "</p>"
+                html += "<p ='list-group-item'>" + "Pressure: " + weatherInfo.list[i].main.pressure + "</p>"
+                html += "</ul>"
+                html += "</div>"
+                html += "</section>"
 
-            //***5-Day Forecast cards***
-            const weatherForDallas = document.getElementById('forecast')
 
-//variable to hold the forecast list, updated every 3 hours
-            const day = result.list;
-//set to index of 8 to obtain 24 hours
-            for (let i = 0; i < day.length; i += 8) {
-                const weather = day[i]
-                const date = new Date(weather.dt * 1000);
-                console.log(date.toLocaleDateString());
-                console.log(weather)
-                //weather.weather[0].icon
-
-
-                // ******** parent div *********
-                const parentDiv = document.createElement('div');
-                parentDiv.classList.add('card');
-                parentDiv.classList.add('card-header');
-                // ********************************
-
-                // ******** date div div *********
-                const dateDiv = document.createElement('h6')
-                parentDiv.appendChild(dateDiv)
-                parentDiv.classList.add('dateDiv')
-                // parentDiv.classList.add('card');
-                // parentDiv.classList.add('card-body')
-
-                // *****************
-                // const dateForecast = document.createElement('p');
-                const temp = document.createElement('p');
-                parentDiv.appendChild(temp)
-
-                const description = document.createElement('p');
-                parentDiv.appendChild(description)
-
-                const humidity = document.createElement('p');
-                parentDiv.appendChild(humidity)
-
-                const wind = document.createElement('p');
-                parentDiv.appendChild(wind)
-
-                const pressure = document.createElement('p');
-                parentDiv.appendChild(pressure)
-
-                dateDiv.innerText = date.toLocaleDateString();
-                temp.innerText = weather.main.temp + "\u00B0" + "F";
-                description.innerText = "Description: " + weather.weather[0].description;
-                humidity.innerText = "Humidity: " + weather.main.humidity;
-                wind.innerText = "Wind: " + weather.wind.speed;
-                pressure.innerText = "Pressure: " + weather.main.pressure;
-
-                weatherForDallas.appendChild(parentDiv);
             }
+            weatherCard.innerHTML = html;
+
+            //********CODE TO REFACTOR*******//
+            //***5-Day Forecast cards***
+            // const forecastInfo = document.getElementById('forecast')
+            // //variable to hold the forecast list, updated every 3 hours
+            // const day = result.list;
+            // //set to index of 8 to obtain 24 hours
+            // for (let i = 0; i < day.length; i += 8) {
+            //     const weather = day[i]
+            //     const date = new Date(weather.dt * 1000);
+            //     console.log(date.toLocaleDateString());
+            //     console.log(weather)
+            //     //weather.weather[0].icon
+            //
+            //     // ******** parent div *********
+            //     const parentDiv = document.createElement('div');
+            //     parentDiv.classList.add('card');
+            //     parentDiv.classList.add('card-header');
+            //     // ********************************
+            //
+            //     // ******** date div div *********
+            //     const dateDiv = document.createElement('h6')
+            //     parentDiv.appendChild(dateDiv)
+            //
+            //     // *****************
+            //     // const dateForecast = document.createElement('p');
+            //     const temp = document.createElement('p');
+            //     parentDiv.appendChild(temp)
+            //
+            //     const description = document.createElement('p');
+            //     parentDiv.appendChild(description)
+            //
+            //     const humidity = document.createElement('p');
+            //     parentDiv.appendChild(humidity)
+            //
+            //     const wind = document.createElement('p');
+            //     parentDiv.appendChild(wind)
+            //
+            //     const pressure = document.createElement('p');
+            //     parentDiv.appendChild(pressure)
+
+                // dateDiv.innerHTML = date.toLocaleDateString();
+                // temp.innerHTML = weather.main.temp + "\u00B0" + "F";
+                // description.innerHTML = "Description: " + weather.weather[0].description;
+                // humidity.innerHTML = "Humidity: " + weather.main.humidity;
+                // wind.innerHTML = "Wind: " + weather.wind.speed;
+                // pressure.innerHTML = "Pressure: " + weather.main.pressure;
+            //
+            //     forecastInfo.appendChild(parentDiv);
+            // }
+            //****CODE TO REFACTOR****
 
         })
 
     console.log(`coordinates ${coordinates}`)
 
-    document.getElementById("sub").addEventListener('click', function () {
-        let currentLocation = geocode(document.getElementById('search').value, MAPBOX_API)
-
-        currentLocation.then(result => {
-            console.log(result)
-            // map.setCenter([result[0], result[1]])
-            weatherCards(result[0], result[1])
-            // let clearData = document.getElementsByClassName("card-body")
-            // clearData.innerHTML = ''
-        })
-    })
+    // document.getElementById("sub").addEventListener('click', function () {
+    //     let currentLocation = geocode(document.getElementById('search').value, MAPBOX_API)
+    //
+    //     currentLocation.then(result => {
+    //         console.log(result)
+    //         // map.setCenter([result[0], result[1]])
+    //         weatherCards(result[0], result[1])
+    //         // let clearData = document.getElementsByClassName("card-body")
+    //         // clearData.innerHTML = ''
+    //     })
+    // })
 
 }
 
 //***Geocode****
-geocode('', MAPBOX_API)
-    .then(coordinates => {
-        console.log(coordinates)
-        map.setCenter(coordinates);
-        map.setZoom(10);
-    })
+// geocode('', MAPBOX_API)
+//     .then(coordinates => {
+//         console.log(coordinates)
+//         map.setCenter(coordinates);
+//         map.setZoom(10);
+//     })
 
 //***Map***//
 
@@ -114,8 +137,6 @@ const marker = new mapboxgl.Marker({
 
 })
 
-// .setLngLat([-96.80585330858273, 32.780731457976096])
-// .addTo(map);
 
 function onDragEnd() {
     const lngLat = marker.getLngLat();
@@ -128,27 +149,6 @@ function onDragEnd() {
 }
 
 marker.on('dragend', onDragEnd);
-
-
-//*********
-
-//*******SearchBox
-// let submitButton = document.getElementById('submitBtn')
-// submitButton.addEventListener('submit', function (event) {
-//     event.preventDefault()
-//     // let searchBox = document.getElementById('searchBox')
-//     // searchbox.value ;
-//     console.log('clicked')
-// })
-
-// const search = document.getElementById('searchBox')
-// search.addEventListener('input', (event) => {
-//     if (e.target !== e.currentTarget) return;
-//     const searchText = event.detail;
-//     // ...
-// });
-//
-//********
 
 
 
@@ -164,7 +164,7 @@ map.on('click', (event) => {
 })
 
 function clearCards () {
-    const clearCards = document.getElementById('forecast');
+    const clearCards = document.getElementById('weather-card');
     clearCards.innerHTML = '';
 }
 

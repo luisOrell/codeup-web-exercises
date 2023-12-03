@@ -276,3 +276,60 @@ diagonalDifference([
 // console.log(incremented); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 
+//***Hacker Rank Exercise***
+function getDiagonal(arr) {
+    // Write your code here
+    // INITIALIZING AN EMPTY ARRAY THAT WILL STORE MY LEFT TO RIGHT VALUES
+    let LeftToRightArr = [];
+    // INITIALIZING A VARIABLE THAT WILL STORE THE *TOTAL* OF MY LEFT TO RIGHT VALUES
+    let LRTotal = 0;
+    // INITIALIZING AN EMPTY ARRAY THAT WILL STORE MY RIGHT TO LEFT VALUES
+    let RightToLeftArr = [];
+    // INITIALIZING A VARIABLE THAT WILL STORE THE *TOTAL* OF MY RIGHT TO LEFT VALUES
+    let RLTotal = 0;
+
+    //vv num IS REPRESENTING THE VALUE OF THE ELEMENT AT THE CURRENT INDEX FOR EACH ITERATION/MAPPING,
+    //vv IN THIS CASE num REPRESENTS EACH NESTED ARRAY IN OUR arrOfNums ARRAY WE ARE PASSING AS AN ARGUMENT TO OUR getDiagonal FUNCTION.
+    arr.map((num, index) => {
+        // ^^ index REPRESENTS THE CURRENT INDEX OF EACH ELEMENT (EACH NESTED ARRAY) WHICH
+        // IN THIS CASE HAPPENS TO CORRELATE/MATCH UP WITH THE ELEMENT IN THE NESTED ARRAY THAT WE WANT TO EXTRACT.
+        // console.log(num);
+        // console.log(index);
+        // console.log(num[index]);
+        // vv PUSHING MY EXTRACTED VALUES TO MY EMPTY LeftToRightArr ARRAY.
+        LeftToRightArr.push(num[index]);
+    })
+    //vv BY USING .reverse() ON THE arr PARAM WE ARE REVERSING THE ORDER OF THE NESTED ARRAYS IN THE PARAM.
+    //vv AFTER REVERSING WE CAN USE .map() JUST LIKE BEFORE, IT WILL STILL EXTRACT THE VALUE FROM LEFT TO RIGHT, BUT
+    //BECAUSE arr IS NOW REVERSED WE GET CORRECT VALUES.
+    arr.reverse().map((num, index) => {
+        // console.log(num);
+        // console.log(num[index]);
+        // vv PUSHING MY EXTRACTED VALUES TO MY EMPTY RightToLeftArr ARRAY.
+        RightToLeftArr.push(num[index]);
+    })
+    // console.log(rightArr);
+    // console.log(leftArr);
+    //LOOPING THROUGH NEW POPULATED LeftToRightArr ARRAY OF NUMBERS
+    LeftToRightArr.forEach((num) => {
+        // ON EACH ITERATION IM ADDING THE VALUE OF num TO MY LRTotal VARIABLE.
+        LRTotal += num;
+    })
+    //LOOPING THROUGH NEW POPULATED LeftToRightArr ARRAY OF NUMBERS
+    //vv ON EACH ITERATION IM ADDING THE VALUE OF num TO MY RLTotal VARIABLE.
+    RightToLeftArr.forEach((num) => RLTotal += num)
+    // console.log(Math.abs(LRTotal - RLTotal));
+    // vv USING Math.abs() TO RETURN THE ABSOLUTE VALUE OF THE DIFFERENCE OF MY TWO TOTALS.
+    return Math.abs(LRTotal - RLTotal)
+}
+
+let arrOfNums = [
+    [ 11, 2, 4 ],
+    [ 4, 5, 6],
+    [ 10, 8, -12]
+];
+
+// getDiagonal(arrOfNums);
+console.log(getDiagonal(arrOfNums));
+
+
