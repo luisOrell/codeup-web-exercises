@@ -1,6 +1,6 @@
 
 function weatherCards (lon,lat) {
-
+    // initializer for html content
     let html = "";
 
     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}` +
@@ -46,7 +46,7 @@ function weatherCards (lon,lat) {
 
 //***Map***//
 mapboxgl.accessToken = MAPBOX_API;
-const coordinates = document.getElementById('coordinates');
+// const coordinates = document.getElementById('coordinates');
 const map = new mapboxgl.Map({
     container: 'map',
 // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -63,10 +63,10 @@ const marker = new mapboxgl.Marker({
 
 })
 
-
+//Marker drag functionality
 function onDragEnd() {
     const lngLat = marker.getLngLat();
-    weatherCards(lngLat.lng, lngLat.lat)
+    weatherCards(lngLat.lng, lngLat.lat);
     clearCards();
 
 }
@@ -74,7 +74,7 @@ function onDragEnd() {
 marker.on('dragend', onDragEnd);
 
 
-// Click Events
+// Map click events
 map.on('click', (event) => {
     console.log(event)
     marker.setLngLat(event.lngLat).addTo(map)
